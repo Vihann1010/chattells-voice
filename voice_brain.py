@@ -146,7 +146,9 @@ The site address is {SITE_ADDRESS}."""
 # THE TURN: one streaming call, sentence-chunked
 # ─────────────────────────────────────────────
 
-_SENTENCE_END = re.compile(r"(?<=[.!?])\s+")
+# Split on sentence ends, but NOT after abbreviations (sq.ft. / Approx. / No.)
+# — a period followed by a lowercase letter or a unit is not a sentence break.
+_SENTENCE_END = re.compile(r"(?<=[.!?])\s+(?=[A-Z\u0900-\u097F])")
 
 def respond_stream(caller_id, user_text, history):
     """Yield speech-ready sentences as soon as they're formed, plus any action.
@@ -166,17 +168,29 @@ def respond_stream(caller_id, user_text, history):
         role="user",
         parts=[types.Part(text=f"Property information:\n{context}\n\nCaller said: {user_text}")]))
 
-    cfg = types.GenerateContentConfig(
+    # Build config defensively: thinking_config isn't in every google-genai version,
+    # and an unsupported kwarg would crash every single turn.
+    cfg_kwargs = dict(
         system_instruction=SYSTEM_PROMPT,
         tools=TOOLS,
         temperature=0.6,
-        max_output_tokens=120,          # hard cap: keeps replies short AND fast
-        thinking_config=types.ThinkingConfig(thinking_budget=0),  # no thinking = lower latency
+        max_output_tokens=150,      # short replies = better on a call AND faster
     )
+    try:
+        cfg_kwargs["thinking_config"] = types.ThinkingConfig(thinking_budget=0)
+    except Exception:
+        pass                        # older SDK: just run without it
+    try:
+        cfg = types.GenerateContentConfig(**cfg_kwargs)
+    except TypeError:
+        cfg_kwargs.pop("thinking_config", None)
+        cfg = types.GenerateContentConfig(**cfg_kwargs)
 
     buffer = ""
     t0 = time.time()
     first_chunk_logged = False
+    said_anything = False
+    did_action = False
 
     for chunk in client.models.generate_content_stream(
             model=VOICE_MODEL, contents=contents, config=cfg):
@@ -185,8 +199,13 @@ def respond_stream(caller_id, user_text, history):
         if chunk.candidates and chunk.candidates[0].content.parts:
             for part in chunk.candidates[0].content.parts:
                 fc = getattr(part, "function_call", None)
-                if fc:
-                    yield {"action": fc.name, "args": dict(fc.args or {})}
+                if fc and getattr(fc, "name", None):
+                    try:
+                        args = dict(fc.args) if fc.args else {}
+                    except Exception:
+                        args = {}
+                    did_action = True
+                    yield {"action": fc.name, "args": args}
                     continue
 
         text = getattr(chunk, "text", None)
@@ -204,10 +223,21 @@ def respond_stream(caller_id, user_text, history):
                 break
             sentence, buffer = buffer[:m.end()].strip(), buffer[m.end():]
             if sentence:
-                yield {"say": to_speech(sentence)}
+                spoken = to_speech(sentence)
+                if spoken:
+                    said_anything = True
+                    yield {"say": spoken}
 
     if buffer.strip():
-        yield {"say": to_speech(buffer.strip())}
+        spoken = to_speech(buffer.strip())
+        if spoken:
+            said_anything = True
+            yield {"say": spoken}
+
+    # Only speak a filler if we produced NEITHER speech NOR an action —
+    # otherwise we'd tack "Ji, boliye" onto every booking/transfer.
+    if not said_anything and not did_action:
+        yield {"say": "Ji, boliye."}
 
 
 # ─────────────────────────────────────────────
@@ -215,14 +245,31 @@ def respond_stream(caller_id, user_text, history):
 # ─────────────────────────────────────────────
 
 def do_book(caller_phone, args, state):
-    slot = visits.parse_freeform_slot(args.get("when", ""))
-    if not slot or "error" in slot or slot.get("month_only"):
-        return ("Sorry ji, main woh time samajh nahi payi. "
-                "Aap din aur time bata sakte hain?")
+    """Returns (success: bool, speech: str)."""
+    when = args.get("when", "")
+    slot = visits.parse_freeform_slot(when)
+
+    if not slot or "error" in slot:
+        msg = (slot.get("error") if isinstance(slot, dict) and "error" in slot
+               else "Sorry ji, main woh time samajh nahi payi.")
+        return False, to_speech(f"{msg} Aap din aur time dobara bata sakte hain?")
+
+    if slot.get("month_only"):
+        return False, to_speech(
+            f"{slot['month_name']} mein kaunsi date aapko theek rahegi?")
+
     name = args.get("name") or state.get("name") or ""
-    visits.book_visit(caller_phone, name, caller_phone, slot)
-    integrations.save_lead(name or "Voice Lead", caller_phone, caller_phone,
-                           f"Voice call — booked site visit: {slot['label']}")
-    label = slot["label"]
-    return to_speech(f"Perfect! Aapki site visit {label} ke liye confirm ho gayi hai. "
-                     f"Main aapko WhatsApp par location bhej dungi.")
+    if name:
+        state["name"] = name
+    try:
+        visits.book_visit(caller_phone, name, caller_phone, slot)
+        integrations.save_lead(name or "Voice Lead", caller_phone, caller_phone,
+                               f"Voice call — booked site visit: {slot['label']}")
+    except Exception as e:
+        print(f"[BOOK ERROR] {e}")
+        return False, to_speech("Booking mein thodi dikkat aa rahi hai, "
+                                "main agent se confirm karwa deti hoon.")
+
+    return True, to_speech(
+        f"Perfect! Aapki site visit {slot['label']} ke liye confirm ho gayi hai. "
+        f"Hamari team aapko details bhej degi.")

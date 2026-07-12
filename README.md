@@ -79,7 +79,9 @@ ZOHO_API_BASE=https://www.zohoapis.in/crm/v2
 ```
 
 ### Vapi config (dashboard.vapi.ai)
-- **Model:** Custom LLM → `https://YOUR-URL/vapi/chat`
+- **Model:** Custom LLM → **base URL only**: `https://YOUR-URL`
+  (Vapi appends `/chat/completions` itself. The server also answers on
+  `/vapi/chat` and `/vapi/chat/completions`, so any of these work.)
 - **Transcriber:** Deepgram `nova-2`, language `multi` (handles Hindi/English mixing)
 - **Voice:** ElevenLabs (Indian accent) or **Sarvam** (best for Hindi)
 - **Server URL:** `https://YOUR-URL/vapi/events`
@@ -121,3 +123,28 @@ not have this problem.
 1. WhatsApp first-touch (₹0.88, instant, non-intrusive)
 2. Voice call **only if no reply in 24h** — voice as the escalation, not the opener
 3. Track pickup and booking rates in `/calls` and compare against WhatsApp
+
+
+## Changelog — hardening pass
+
+Fixed after the first live call:
+1. **`KeyError: 'sentences'`** — `/vapi/events` created the call state first with
+   only `phone`, so `setdefault(call_id, {...})` in `/chat/completions` never added
+   the other keys. Every turn crashed. State keys are now filled individually.
+2. **Endpoint path** — Vapi calls `/chat/completions` (OpenAI-style). Added that
+   route; the old paths still work.
+3. **Clock times** — "04:00 PM" was spoken as "zero four, zero zero PM".
+   Now "4 PM".
+4. **Sentence splitting** — broke on abbreviation periods ("sq.ft." split a
+   sentence mid-way). Now only splits before a capital/Devanagari letter.
+5. **Spurious filler** — "Ji, boliye" was appended after every booking/transfer.
+   Now only fires when neither speech nor an action occurred.
+6. **Never silent** — every failure path (empty model response, Gemini outage,
+   booking error, malformed request) now still SPEAKS. A silent call is a dead call.
+7. **SDK resilience** — `thinking_config` is applied only if the installed
+   `google-genai` supports it, instead of crashing every turn.
+8. **Python pinned to 3.11** (`.python-version`) — Render defaulted to 3.14,
+   which is very new and some libraries lag behind it.
+
+Measured on your live call: **first LLM token in ~400–430ms**, matching the
+design target.

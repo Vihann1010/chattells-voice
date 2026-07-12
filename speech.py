@@ -173,6 +173,15 @@ def to_speech(text):
     t = re.sub(r"\+?\d{2}[-\s]?\d{5}[-\s]?\d{5}",
                lambda m: " ".join(d for d in re.sub(r"\D", "", m.group(0))), t)
 
+    # clock times FIRST, before ':' becomes a comma.
+    # "04:00 PM" -> "4 PM";  "11:30 AM" -> "11 30 AM"
+    def _clock(m):
+        h, mn, ap = int(m.group(1)), m.group(2), (m.group(3) or "").upper()
+        if mn == "00":
+            return f"{h} {ap}".strip()
+        return f"{h} {int(mn)} {ap}".strip()
+    t = re.sub(r"\b(\d{1,2}):(\d{2})\s*(AM|PM)?\b", _clock, t, flags=re.IGNORECASE)
+
     # tidy punctuation for natural prosody
     t = t.replace("(", ", ").replace(")", ", ")
     t = re.sub(r"\s*[:;]\s*", ", ", t)
