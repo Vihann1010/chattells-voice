@@ -1,0 +1,715 @@
+================================================================================
+DOCUMENT: SUNRISE HEIGHTS — COMPLETE PROPERTY KNOWLEDGE BASE
+VERSION: 1.0
+PURPOSE: RAG Pipeline Knowledge Base for Real Estate Chatbot
+PROPERTY ID: SRH-2024-BLR-001
+================================================================================
+
+--------------------------------------------------------------------------------
+SECTION 1: PROJECT OVERVIEW
+--------------------------------------------------------------------------------
+
+CHUNK_ID: SRH-001
+TOPIC: Project Introduction
+TAGS: overview, project, introduction, about
+
+Sunrise Heights is a premium residential apartment complex developed by Aurora Realty Developers Pvt. Ltd. The project is located in Whitefield, Bangalore, Karnataka, India — one of the city's fastest-growing and most sought-after real estate corridors. Sunrise Heights offers a blend of modern architecture, world-class amenities, and sustainable living in a gated community spanning 5.2 acres of prime land. The project is RERA-registered and has received all necessary statutory approvals from the BBMP (Bruhat Bengaluru Mahanagara Palike) and BDA (Bangalore Development Authority).
+
+CHUNK_ID: SRH-002
+TOPIC: Developer Profile
+TAGS: developer, builder, reputation, experience, company
+
+Aurora Realty Developers Pvt. Ltd. was founded in 2005 and has delivered over 18 residential and commercial projects across Bangalore, Hyderabad, and Pune. The company has a track record of on-time delivery with zero pending litigation on any of its past projects. Aurora Realty is ISO 9001:2015 certified and is a member of CREDAI (Confederation of Real Estate Developers' Associations of India). Their previous flagship project, Aurora Grand in Sarjapur Road, was completed 3 months ahead of schedule in 2022 and received the "Best Residential Project" award from the Bangalore Real Estate Forum.
+
+CHUNK_ID: SRH-003
+TOPIC: RERA Registration
+TAGS: RERA, legal, registration, compliance, approved
+
+Sunrise Heights is registered under the Real Estate (Regulation and Development) Act, 2016. The RERA Registration Number is PRM/KA/RERA/1251/310/PR/180324/006542. Buyers can verify this registration at https://rera.karnataka.gov.in by entering the registration number. The RERA registration ensures that all project details, timelines, and financial disclosures are legally binding. The project's RERA-approved completion date is March 31, 2027, and the developer has provided an Escrow Account (State Bank of India, Whitefield Branch, A/C No. 39847562001) into which 70% of all buyer payments are deposited and can only be used for project construction.
+
+--------------------------------------------------------------------------------
+SECTION 2: LOCATION AND CONNECTIVITY
+--------------------------------------------------------------------------------
+
+CHUNK_ID: SRH-004
+TOPIC: Project Location
+TAGS: location, address, area, Whitefield, Bangalore
+
+Sunrise Heights is located at Plot No. 47, EPIP Zone, Whitefield Main Road, Whitefield, Bangalore – 560066, Karnataka, India. The project sits in the heart of Whitefield, which is a primary IT and residential hub in East Bangalore. The locality is flanked by ITPL (International Tech Park Limited) to the north and the upcoming Namma Metro Phase 3 corridor to the south. The GPS coordinates of the site are: 12.9698° N, 77.7499° E.
+
+CHUNK_ID: SRH-005
+TOPIC: Nearby Landmarks
+TAGS: landmarks, nearby, location, hospital, school, mall, distance
+
+Key landmarks near Sunrise Heights:
+- ITPL (International Tech Park Bangalore): 1.2 km
+- Whitefield Metro Station (Purple Line, Phase 2): 0.8 km
+- Hope Farm Junction: 1.5 km
+- Phoenix Marketcity Mall: 3.4 km
+- Forum Shantiniketan Mall: 2.1 km
+- Vydehi Institute of Medical Sciences (Hospital): 2.0 km
+- Columbia Asia Hospital: 3.8 km
+- Manipal Hospital, Whitefield: 2.9 km
+- Inventure Academy School: 1.1 km
+- Vibgyor High School: 1.8 km
+- Deens Academy: 2.3 km
+- Bangalore International Airport (Kempegowda): 42 km (approx. 45–55 min by road)
+- MG Road (City Centre): 18 km (approx. 40–50 min by road)
+- Marathahalli Bridge: 6.5 km
+
+CHUNK_ID: SRH-006
+TOPIC: Transportation and Connectivity
+TAGS: metro, bus, connectivity, transport, commute, road
+
+Sunrise Heights enjoys excellent connectivity via multiple modes of transport. The Whitefield (Kadugodi) Metro Station on the Purple Line (Baiyappanahalli–Whitefield) is just 0.8 km away, offering direct metro access to MG Road, Majestic, and other central locations. BMTC buses serving routes 500C, 335E, and 314 have stops within 400 meters of the project. The Outer Ring Road (ORR) is accessible within 4 km, connecting residents to other tech corridors including Marathahalli, Bellandur, and Electronic City. The upcoming Peripheral Ring Road (PRR) will further reduce commute times. An Ola/Uber auto-stand and cab aggregator pick-up zone is being established at the project gate as part of last-mile connectivity infrastructure.
+
+--------------------------------------------------------------------------------
+SECTION 3: APARTMENT CONFIGURATIONS AND SIZES
+--------------------------------------------------------------------------------
+
+CHUNK_ID: SRH-007
+TOPIC: Unit Types and Sizes
+TAGS: configuration, BHK, size, area, unit types, apartment types
+
+Sunrise Heights offers apartments in four configurations to cater to diverse buyer needs:
+
+1. 1 BHK (1 Bedroom, Hall, Kitchen):
+   - Super Built-Up Area: 620 sq. ft.
+   - Carpet Area: 445 sq. ft.
+   - Number of Units: 48
+   - Floors Available: Ground to 5th Floor only
+
+2. 2 BHK Standard (2 Bedroom, Hall, Kitchen):
+   - Super Built-Up Area: 1,050 sq. ft.
+   - Carpet Area: 755 sq. ft.
+   - Number of Units: 120
+   - Available on all floors (Ground to 18th)
+
+3. 2 BHK Large (2 Bedroom + Study, Hall, Kitchen):
+   - Super Built-Up Area: 1,250 sq. ft.
+   - Carpet Area: 898 sq. ft.
+   - Number of Units: 96
+   - Available on 6th to 18th Floor
+
+4. 3 BHK Premium (3 Bedroom, Hall, Kitchen, Utility):
+   - Super Built-Up Area: 1,680 sq. ft.
+   - Carpet Area: 1,208 sq. ft.
+   - Number of Units: 72
+   - Available on 10th to 18th Floor (Premium Sky Floors)
+
+Total Number of Units: 336
+Total Number of Towers: 3 (Tower A, Tower B, Tower C)
+Total Number of Floors per Tower: Ground + 18 Upper Floors (G+18)
+
+CHUNK_ID: SRH-008
+TOPIC: Carpet Area vs Super Built-Up Area Explanation
+TAGS: carpet area, super built-up area, loading factor, area calculation
+
+At Sunrise Heights, the carpet area is calculated as per RERA guidelines and refers to the actual usable floor area within the walls of the apartment, excluding the thickness of walls, balconies, and common areas. The super built-up area (SBA) includes the carpet area plus proportional share of common areas such as lobbies, staircases, lift shafts, and amenity spaces. The loading factor at Sunrise Heights is approximately 28% for 1 BHK and 2 BHK units and 27% for 3 BHK units. Per RERA norms, all pricing and sale agreements are based on the carpet area only, not the super built-up area.
+
+--------------------------------------------------------------------------------
+SECTION 4: PRICING AND PAYMENT
+--------------------------------------------------------------------------------
+
+CHUNK_ID: SRH-009
+TOPIC: Base Price and Unit Pricing
+TAGS: price, cost, rate, per sq ft, total price, budget
+
+Current base prices at Sunrise Heights (as of Q1 2024) are:
+
+1 BHK (620 sq. ft. SBA / 445 sq. ft. Carpet):
+   - Price: ₹55.8 Lakhs onwards (All-Inclusive)
+   - Rate per sq. ft. (SBA): ₹9,000/sq. ft.
+
+2 BHK Standard (1,050 sq. ft. SBA / 755 sq. ft. Carpet):
+   - Price: ₹94.5 Lakhs onwards
+   - Rate per sq. ft. (SBA): ₹9,000/sq. ft.
+
+2 BHK Large (1,250 sq. ft. SBA / 898 sq. ft. Carpet):
+   - Price: ₹1.18 Crore onwards
+   - Rate per sq. ft. (SBA): ₹9,400/sq. ft.
+
+3 BHK Premium (1,680 sq. ft. SBA / 1,208 sq. ft. Carpet):
+   - Price: ₹1.68 Crore onwards
+   - Rate per sq. ft. (SBA): ₹10,000/sq. ft.
+
+Note: Floor rise charges apply at ₹50 per sq. ft. per floor for floors 10 and above. Prices are subject to revision without prior notice. Corner units and units with park-facing or pool-facing views carry a premium of 3–5%.
+
+CHUNK_ID: SRH-010
+TOPIC: Additional Charges (Beyond Base Price)
+TAGS: additional charges, GST, registration, stamp duty, maintenance, parking, costs
+
+The following charges are applicable in addition to the base apartment price:
+
+- GST (Goods and Services Tax): 5% on the base price (as applicable under current regulations for under-construction properties; nil for ready-to-move-in units)
+- Stamp Duty: 5% of the agreement value (as per Karnataka Government norms)
+- Registration Charges: 1% of the agreement value (capped at ₹1 Lakh)
+- Khata Transfer Charges: ₹25,000 (one-time)
+- Car Parking (Covered, Stilt):
+   - 1 Covered Parking: ₹5,00,000 (mandatory for 2 BHK and 3 BHK)
+   - 2nd Covered Parking (optional): ₹5,00,000 additional
+   - Open Parking: ₹2,00,000
+- Corpus Fund (Maintenance Reserve): ₹1,00,000 (one-time, non-refundable)
+- Club Membership: ₹75,000 (one-time, lifetime)
+- Advance Maintenance Deposit: ₹50,000 (refundable at time of possession)
+
+CHUNK_ID: SRH-011
+TOPIC: Payment Plans
+TAGS: payment plan, construction linked, down payment, EMI, installment
+
+Sunrise Heights offers three payment plan options:
+
+PLAN A — Construction Linked Plan (CLP):
+- 10% on Booking
+- 15% within 30 days of booking (on agreement signing)
+- 10% on Completion of Foundation
+- 10% on Completion of Ground Floor Slab
+- 10% on Completion of 6th Floor Slab
+- 10% on Completion of 12th Floor Slab
+- 10% on Completion of 18th Floor Slab (Top Slab)
+- 10% on Completion of Plastering and Internal Finishes
+- 10% on Possession (less TDS where applicable)
+- 5% on Registration
+
+PLAN B — Down Payment Plan (10% Discount on Base Price):
+- 90% of total amount within 60 days of booking
+- 10% on Possession
+
+PLAN C — Flexi Plan:
+- 20% within 30 days of booking
+- 50% within 90 days of booking
+- 30% on Possession
+- Applicable discount: 5% on base price
+
+Home loan assistance is available through tie-ups with HDFC Bank, SBI Home Loans, ICICI Bank, Axis Bank, and Bajaj Housing Finance. The project is pre-approved by all five lending partners.
+
+CHUNK_ID: SRH-012
+TOPIC: Home Loan Eligibility and Process
+TAGS: home loan, bank, eligibility, EMI, finance, loan amount
+
+Sunrise Heights is pre-approved by HDFC Bank, SBI, ICICI Bank, Axis Bank, and Bajaj Housing Finance, which simplifies and speeds up the home loan process for buyers. Generally, banks offer up to 80% of the property's agreement value as a home loan. For a ₹1 Crore apartment, buyers can typically avail a loan of ₹80 Lakhs. For salaried individuals, typical eligibility is approximately 60 times the monthly gross salary. Buyers with a CIBIL score of 750 and above are eligible for the best interest rates. Current indicative home loan interest rates range from 8.5% to 9.2% p.a. (floating rate, as of early 2024). Our dedicated financial advisor, Mr. Ramesh Kumar (Contact: +91-98451-23456), assists buyers with documentation and loan processing at no extra charge.
+
+--------------------------------------------------------------------------------
+SECTION 5: FLOOR PLAN AND LAYOUT
+--------------------------------------------------------------------------------
+
+CHUNK_ID: SRH-013
+TOPIC: Floor Plan Details — 1 BHK
+TAGS: floor plan, 1BHK, layout, rooms, dimension
+
+The 1 BHK apartment at Sunrise Heights has the following room dimensions:
+- Living Room + Dining: 11 ft x 14 ft (154 sq. ft.)
+- Master Bedroom: 11 ft x 12 ft (132 sq. ft.)
+- Kitchen: 8 ft x 9 ft (72 sq. ft.) — Modular Kitchen included
+- Bathroom: 5 ft x 8 ft (40 sq. ft.) — Attached to Bedroom
+- Utility/Balcony: 4 ft x 8 ft (32 sq. ft.)
+- Entrance Foyer: 4 ft x 6 ft
+All 1 BHK units are east-facing and available only on Ground to 5th Floor.
+
+CHUNK_ID: SRH-014
+TOPIC: Floor Plan Details — 2 BHK Standard
+TAGS: floor plan, 2BHK, layout, rooms, dimension
+
+The 2 BHK Standard apartment layout:
+- Living Room: 12 ft x 14 ft (168 sq. ft.)
+- Dining Area: 8 ft x 10 ft (80 sq. ft.)
+- Master Bedroom: 12 ft x 13 ft (156 sq. ft.) with attached bathroom and wardrobe
+- Bedroom 2: 10 ft x 12 ft (120 sq. ft.) with common bathroom access
+- Kitchen: 8 ft x 10 ft (80 sq. ft.) — Modular Kitchen included
+- Master Bathroom: 5 ft x 8 ft (40 sq. ft.)
+- Common Bathroom: 4.5 ft x 7 ft (31.5 sq. ft.)
+- Balcony (Living): 5 ft x 10 ft (50 sq. ft.)
+- Utility Area: 4 ft x 5 ft (20 sq. ft.)
+
+CHUNK_ID: SRH-015
+TOPIC: Floor Plan Details — 3 BHK Premium
+TAGS: floor plan, 3BHK, layout, rooms, dimension, premium
+
+The 3 BHK Premium apartment layout:
+- Living Room: 14 ft x 16 ft (224 sq. ft.)
+- Dining Area: 10 ft x 12 ft (120 sq. ft.)
+- Master Bedroom: 14 ft x 14 ft (196 sq. ft.) with en-suite bathroom, walk-in wardrobe
+- Bedroom 2: 12 ft x 13 ft (156 sq. ft.) with attached bathroom
+- Bedroom 3: 11 ft x 12 ft (132 sq. ft.)
+- Kitchen: 9 ft x 11 ft (99 sq. ft.) — Modular kitchen with island counter
+- Master Bathroom: 6 ft x 9 ft (54 sq. ft.) — Premium fittings
+- Bathroom 2: 5 ft x 8 ft (40 sq. ft.)
+- Common Bathroom: 4.5 ft x 7 ft
+- Main Balcony: 6 ft x 12 ft (72 sq. ft.)
+- Secondary Balcony: 5 ft x 8 ft
+- Utility Room: 5 ft x 6 ft (30 sq. ft.)
+- Foyer: 5 ft x 8 ft
+
+CHUNK_ID: SRH-016
+TOPIC: Tower Layout and Facing
+TAGS: tower, facing, north, south, east, west, view, orientation
+
+Tower A: North-South facing. Units on the north face overlook the landscaped garden and central park. Units on the south face have an open city view. Tower A houses 1 BHK and 2 BHK Standard units.
+
+Tower B: East-West facing. East-facing units receive morning sunlight and overlook the lake (Kundalahalli Lake is approximately 800m away). West-facing units have sunset views. Tower B houses 2 BHK Standard and 2 BHK Large units.
+
+Tower C: Southeast-facing. All 3 BHK Premium units are in Tower C, featuring panoramic views. Corner units in Tower C (C-01 and C-04 per floor) offer dual views — south and east simultaneously.
+
+Each tower has 2 high-speed lifts (one service lift + one passenger lift). Tower C has 3 lifts.
+
+--------------------------------------------------------------------------------
+SECTION 6: SPECIFICATIONS AND FINISHES
+--------------------------------------------------------------------------------
+
+CHUNK_ID: SRH-017
+TOPIC: Structure and Civil Specifications
+TAGS: structure, RCC, earthquake, construction quality, cement, specifications
+
+Sunrise Heights is built using an RCC (Reinforced Cement Concrete) framed structure designed to withstand Zone II and Zone III earthquake intensity as per IS 1893:2016. The structure uses M30-grade concrete and Fe-500 TMT steel bars. Exterior walls are made of 6-inch AAC (Autoclaved Aerated Concrete) blocks for superior thermal insulation and reduced building weight. Internal walls use 4-inch AAC blocks. The building has been designed by renowned structural firm "StrongBuild Consultants" and certified by an independent third-party structural auditor.
+
+CHUNK_ID: SRH-018
+TOPIC: Flooring Specifications
+TAGS: flooring, vitrified, marble, tiles, specifications, finish
+
+Flooring specifications at Sunrise Heights:
+- Living and Dining Areas: 800mm x 800mm premium vitrified tiles (Italian-finish, Kajaria or equivalent brand)
+- Bedrooms: 600mm x 600mm vitrified tiles (anti-skid, warm-finish)
+- Master Bedroom (3 BHK only): Italian marble flooring (Botticino or equivalent)
+- Kitchen: Anti-skid ceramic tiles (300mm x 300mm)
+- Bathrooms: Anti-skid ceramic tiles on floor; glazed ceramic tiles on walls up to ceiling
+- Balconies: Anti-skid outdoor tiles (600mm x 600mm)
+- Common Areas (Lobbies): Premium imported marble flooring
+- Staircases: Granite finish
+
+CHUNK_ID: SRH-019
+TOPIC: Kitchen Specifications
+TAGS: kitchen, modular, granite, chimney, sink, cabinets, specifications
+
+Kitchen specifications:
+- Full modular kitchen with floor-mounted base cabinets and wall-mounted overhead cabinets
+- Shutter material: BWR (Boiling Water Resistant) Grade 1 plywood with acrylic finish
+- Countertop: Black galaxy granite (25mm thick)
+- Stainless steel single-bowl sink with drain board (Franke or equivalent)
+- Provision for 3-in-1 chimney and microwave bracket
+- Exhaust fan provision
+- Point for RO water purifier
+- 2 BHK and 3 BHK: Separate utility area with provision for washing machine and utility sink
+- 3 BHK Premium: Kitchen island with waterfall granite countertop included
+
+CHUNK_ID: SRH-020
+TOPIC: Bathroom and Sanitary Fittings
+TAGS: bathroom, sanitary, CP fittings, brand, toilet, shower, bathtub, specifications
+
+Bathroom specifications:
+- Sanitary ware: Kohler (Master Bathrooms in 3 BHK) / Hindware (Standard Bathrooms)
+- CP Fittings: Jaquar (all units)
+- Shower cubicle with frameless glass partition in Master Bathroom (all units)
+- Bathtub provision in Master Bathroom of 3 BHK Premium (bathtub included)
+- EWC (European Water Closet) with concealed cistern
+- Wall-mounted wash basin with pedestal in all bathrooms
+- Hot and cold water mixer in all showers
+- Exhaust fan in all bathrooms
+- Provision for geyser (electrical point provided)
+- Anti-skid tiles (slip-resistant) on all bathroom floors
+- False ceiling with waterproof paint in bathrooms
+
+CHUNK_ID: SRH-021
+TOPIC: Doors and Windows
+TAGS: doors, windows, UPVC, main door, bedroom door, specifications
+
+Door and window specifications:
+- Main Door: 8-foot engineered wood door with solid wood frame, teak veneer finish, digital lock provision, and heavy-duty brass fittings (Godrej or Sleek brand)
+- Internal Bedroom Doors: Hollow-core flush doors with laminate finish, 7-foot height
+- Bathroom Doors: Waterproof WPC (Wood Plastic Composite) doors
+- Windows: UPVC sliding windows (Fenesta or equivalent) with fly mesh and tinted glass
+- French Doors to Balcony: UPVC French doors with sliding panels
+- All external-facing windows are double-glazed for acoustic insulation
+
+CHUNK_ID: SRH-022
+TOPIC: Electrical and Wiring
+TAGS: electrical, wiring, switches, MCB, power backup, specifications
+
+Electrical specifications:
+- All wiring is ISI-marked concealed PVC conduit copper wiring (Finolex or equivalent)
+- Modular switches: Legrand or Schneider (white/brushed aluminum)
+- 1 BHK: 3 kW electrical load; 2 BHK: 5 kW load; 3 BHK: 7.5 kW load
+- MCB (Miniature Circuit Breaker) for each circuit in every unit
+- ELCB (Earth Leakage Circuit Breaker) for all wet areas
+- Power backup: 1 kW per unit through DG set (Kirloskar, 500 kVA) for essential circuits (lights, fans, one plug point per room)
+- 100% power backup for all common areas and lifts
+- TV/DTH points in living room and all bedrooms
+- High-speed internet (FTTH) point in living room and master bedroom
+- AC provision (5-star rated point + drain pipe) in all bedrooms and living room
+- Video doorbell provision at main entrance
+
+CHUNK_ID: SRH-023
+TOPIC: Painting and Finishes
+TAGS: paint, texture, exterior, interior, wall finish, specifications
+
+Painting and finish specifications:
+- Interior Walls: Premium emulsion paint (Asian Paints Royale or equivalent) — 2 coats of putty + primer + 2 topcoats
+- Ceiling: OBD (Oil Bound Distemper) — white finish
+- Exterior: Texture paint on weather-exposed surfaces (Asian Paints Apex Ultima or equivalent) for water resistance
+- Common Lobby Walls: Designer wallpaper or Venetian plaster finish
+- Balcony: Weather-resistant exterior paint
+
+--------------------------------------------------------------------------------
+SECTION 7: AMENITIES
+--------------------------------------------------------------------------------
+
+CHUNK_ID: SRH-024
+TOPIC: Clubhouse and Indoor Amenities
+TAGS: clubhouse, amenities, gym, party hall, indoor, recreation
+
+The Sunrise Heights Clubhouse spans 12,000 sq. ft. across two floors and includes the following indoor amenities:
+- Fully equipped Gymnasium with cardio, free weights, and strength training equipment (Life Fitness / Technogym brand)
+- Yoga and Meditation Studio with dedicated instructor space
+- Indoor Badminton Court (2 courts)
+- Table Tennis Room (2 tables)
+- Billiards / Pool Table Room
+- Squash Court (1 court)
+- Mini Theatre / Screening Room (30-seater, 4K projection)
+- Multi-purpose Party Hall (150-person capacity) with modular kitchen
+- Children's Activity Room / Crèche
+- Library and Reading Lounge with complimentary Wi-Fi
+- Co-working Space (30 seats) with high-speed internet
+- Indoor Kids' Play Zone (soft play)
+- Grocery Convenience Store (ground level)
+- Salon and Spa (operated by third-party vendor)
+- Café / Coffee Bar
+
+CHUNK_ID: SRH-025
+TOPIC: Outdoor Amenities
+TAGS: swimming pool, outdoor, park, sports, garden, amenities
+
+Outdoor amenities at Sunrise Heights:
+- Olympic-length Swimming Pool (25m x 10m, 6 lanes) with temperature control
+- Separate Kids' Pool (1.2m depth) with water play area
+- Pool Deck with sun loungers and umbrellas
+- Landscaped Central Park (1.2 acres) with walking and jogging track (400m track)
+- Outdoor Amphitheater / Open-Air Event Space
+- Basketball Half-Court
+- Futsal / Five-a-Side Football Court (synthetic turf)
+- Outdoor Badminton Courts (2)
+- Cricket Practice Net (2 lanes)
+- Senior Citizen Relaxation Zone with seating and shaded walkways
+- Children's Outdoor Play Area (certified European-standard equipment)
+- Pet Park / Dog Walking Zone (enclosed, with washing station)
+- Barbeque / Party Lawn Area (available for booking)
+- Outdoor Yoga Deck
+- Sky Garden (rooftop, Tower C) — accessible to all residents
+- Skating Rink (paved, suitable for cycles, scooters, roller skates)
+- EV Charging Stations (20 bays in the parking area)
+- Bicycle Parking and Bicycle Sharing System (within campus)
+
+CHUNK_ID: SRH-026
+TOPIC: Smart Home and Technology Features
+TAGS: smart home, technology, video door, intercom, automation, IoT
+
+Smart features at Sunrise Heights:
+- Video Door Phone (VDP) in every apartment, connected to a mobile app via Sunrise Heights smart community platform
+- Apartment Access via key card or mobile NFC tag (all towers)
+- Visitor Management System: Visitors register at the main gate; residents receive a notification on their smartphone to approve or deny entry
+- Integrated Intercom connecting apartment to security cabin, clubhouse, and other apartments
+- Smart meters for electricity, water, and common area usage monitoring via mobile app
+- Roof-mounted solar panels generating approximately 120 kW — shared across common area consumption
+- Rainwater harvesting capacity: 2 lakh litres
+- STP (Sewage Treatment Plant) of capacity 300 KLD; treated water reused for landscape irrigation
+- CCTV surveillance with 108 cameras covering all common areas, lifts, staircases, and parking; footage stored for 30 days
+- Central Wi-Fi hotspots in all common areas
+- EV charging station integration with mobile app for slot booking
+
+--------------------------------------------------------------------------------
+SECTION 8: MAINTENANCE AND SOCIETY
+--------------------------------------------------------------------------------
+
+CHUNK_ID: SRH-027
+TOPIC: Maintenance Charges
+TAGS: maintenance, monthly, charges, society, upkeep
+
+Monthly maintenance charges at Sunrise Heights are calculated based on the carpet area of the apartment:
+- Rate: ₹4.5 per sq. ft. of carpet area per month
+  - 1 BHK (445 sq. ft. carpet): ≈ ₹2,002/month
+  - 2 BHK Standard (755 sq. ft. carpet): ≈ ₹3,397/month
+  - 2 BHK Large (898 sq. ft. carpet): ≈ ₹4,041/month
+  - 3 BHK Premium (1,208 sq. ft. carpet): ≈ ₹5,436/month
+
+Maintenance charges cover: security services (24x7), housekeeping of common areas, lift maintenance, STP operations, swimming pool maintenance, landscaping, DG set operations, and basic repairs. Clubhouse usage is included in maintenance. Additional charges may apply for booking event spaces or premium services.
+
+CHUNK_ID: SRH-028
+TOPIC: Resident Welfare Association (RWA)
+TAGS: RWA, society, association, governance, management
+
+A Resident Welfare Association (RWA) will be formed within 6 months of the majority of units (more than 50%) being handed over. Until the RWA is constituted, the developer, Aurora Realty, will manage all maintenance services. Post-RWA formation, a professional property management company (preferred partner: JLL Residential Services) may be engaged by the RWA for facility management. The RWA will hold the corpus fund (₹1,00,000 per unit collected at the time of booking) and all security deposits.
+
+--------------------------------------------------------------------------------
+SECTION 9: PARKING
+--------------------------------------------------------------------------------
+
+CHUNK_ID: SRH-029
+TOPIC: Parking Details
+TAGS: parking, car, two-wheeler, covered, stilt, basement, EV
+
+Parking details at Sunrise Heights:
+- Total covered parking slots: 380 (stilt + 2 basement levels)
+- Total open parking slots: 40
+- 1 BHK: 1 covered parking slot included (mandatory). Second slot at additional cost.
+- 2 BHK: 1 covered parking slot mandatory; option for 2nd slot at ₹5,00,000.
+- 3 BHK: 2 covered parking slots included.
+- Two-wheeler parking: 200 dedicated slots on stilt floor; free for all residents.
+- Visitor parking: 30 open slots at the main gate area; free for visitors up to 4 hours.
+- EV Charging Bays: 20 (to be expanded to 50 in Phase 2); EV charging cost per unit is metered and charged separately.
+- Parking Management: Mechanical/Puzzle Parking System in Basement 2 to maximize space utilization.
+- Parking allotment: Allotted by lottery conducted in the presence of buyers after 80% bookings.
+
+--------------------------------------------------------------------------------
+SECTION 10: POSSESSION AND HANDOVER
+--------------------------------------------------------------------------------
+
+CHUNK_ID: SRH-030
+TOPIC: Possession Timeline
+TAGS: possession, handover, OC, completion, date, timeline
+
+Expected possession date for Sunrise Heights is March 31, 2027 (as per RERA registration). The construction commenced on April 1, 2024. The developer has committed to a possession date of December 31, 2026 as a target (3 months ahead of RERA date) based on the current construction pace. As of Q1 2024, foundation and piling work is complete for all three towers. An Occupancy Certificate (OC) will be obtained from BBMP before handing over possession to any buyer. A 15-day pre-possession inspection will be offered to each buyer, during which snag list items (minor defects) will be noted and rectified before the final handover.
+
+CHUNK_ID: SRH-031
+TOPIC: Possession Process and Checklist
+TAGS: possession, handover, process, checklist, documents, keys
+
+The possession process at Sunrise Heights follows these steps:
+1. Demand Letter: Issued by Aurora Realty 60 days before possession.
+2. Final Payment: Buyer clears remaining balance (typically 10% + charges).
+3. Pre-Possession Inspection: Buyer inspects the unit with a site engineer and submits snag list.
+4. Snag Rectification: Developer rectifies all items within 30 days.
+5. OC Availability: Occupancy Certificate is shared with the buyer.
+6. Key Handover Ceremony: Formal handing of keys at a ceremony organized on-site.
+7. Registration: Sale Deed is registered at the Sub-Registrar's Office. Aurora Realty provides legal assistance for documentation.
+8. Society Transfer: Buyer is introduced to the RWA and given society access credentials.
+
+Documents given at possession: OC copy, sale deed, khata, encumbrance certificate, possession letter, warranty cards for fittings, home manual.
+
+CHUNK_ID: SRH-032
+TOPIC: Warranty and Defect Liability
+TAGS: warranty, defect, liability, repairs, post-possession
+
+Sunrise Heights comes with the following post-possession warranties:
+- Structural Warranty: 10 years on the structural integrity of the building (as mandated by RERA).
+- Workmanship Defect Warranty: 5 years for any defects in construction workmanship (seepage, cracks, plumbing failures) as per RERA Section 14(3).
+- Fixtures Warranty: Individual appliance/fixture warranties as provided by respective manufacturers (e.g., Kohler fittings – 2 years, modular kitchen shutters – 1 year, UPVC windows – 5 years).
+- After-Sales Service Desk: Aurora Realty operates a 24x7 customer support helpline (+91-80-4567-8900) and a mobile app for logging complaints. Complaints are acknowledged within 24 hours and resolved within 7 working days for non-structural issues.
+
+--------------------------------------------------------------------------------
+SECTION 11: LEGAL AND DOCUMENTATION
+--------------------------------------------------------------------------------
+
+CHUNK_ID: SRH-033
+TOPIC: Legal Clearances and Title
+TAGS: title, legal, approvals, BBMP, BDA, clear title, encumbrance
+
+Sunrise Heights has a clear, marketable, and unencumbered title. The land was originally agricultural land converted for residential use via a Government Order dated February 12, 2020 (Section 95 of the Karnataka Land Revenue Act, 1964). The title chain is unbroken for the past 50 years. All the following approvals have been obtained:
+- BBMP Building Plan Sanction: Obtained on August 5, 2023
+- BDA Layout Approval: Obtained
+- RERA Registration: PRM/KA/RERA/1251/310/PR/180324/006542
+- Environment Clearance: Obtained from Karnataka State Environment Impact Assessment Authority (SEIAA) on June 14, 2023
+- Fire NOC: Obtained from Karnataka Fire and Emergency Services
+- Aviation Clearance: Height clearance from Airports Authority of India obtained (building within permissible height)
+- Water and Sewage Connection Approval: BWSSB (Bangalore Water Supply and Sewerage Board) approval obtained
+
+A legal opinion on the title was obtained from M/s. Prakash & Nair Associates, Senior Advocates, Bangalore.
+
+CHUNK_ID: SRH-034
+TOPIC: Documentation Required from Buyer
+TAGS: documents, buyer, KYC, AML, identification, process
+
+Documents required from the buyer at the time of booking:
+- KYC Documents: Aadhaar Card + PAN Card (mandatory)
+- Address Proof (if different from Aadhaar): Passport / Driving License / Utility Bill
+- Passport-sized photographs: 4 copies
+- Income Proof (for home loan processing): Last 3 months salary slips + 6 months bank statement + Form 16 (for salaried); Last 3 years ITR + P&L statements (for self-employed)
+- NRI Buyers: Passport + Visa + OCI/PIO Card (if applicable) + NRE/NRO Bank Account details + Power of Attorney if buying through a representative
+
+CHUNK_ID: SRH-035
+TOPIC: NRI Purchase Process
+TAGS: NRI, non-resident Indian, foreign, purchase, POA, FEMA, repatriation
+
+Non-Resident Indians (NRIs) can purchase residential property in India including Sunrise Heights without any special permission from the Reserve Bank of India (RBI), subject to FEMA regulations. NRI buyers at Sunrise Heights benefit from:
+- Dedicated NRI relationship manager: Ms. Priya Nair (+91-99001-23456; priyanair@aurorarealty.in)
+- Virtual site tours and online booking process
+- Power of Attorney (POA) acceptance for all documentation and registration
+- Home loan available through NRE/NRO accounts from HDFC Bank NRI services and SBI NRI branch
+- Repatriation of sale proceeds (up to the original investment amount) is permitted under FEMA guidelines
+- OCI card holders are treated at par with NRIs for property purchase purposes
+
+--------------------------------------------------------------------------------
+SECTION 12: INVESTMENT AND RESALE POTENTIAL
+--------------------------------------------------------------------------------
+
+CHUNK_ID: SRH-036
+TOPIC: Investment Returns and Rental Yield
+TAGS: investment, rental yield, ROI, appreciation, returns, rent
+
+Whitefield has historically seen property appreciation of 8–12% per annum over the last 5 years. With the completion of Namma Metro Phase 2 and the upcoming PRR, property values in the micro-market are projected to appreciate further. Expected rental yields:
+- 1 BHK: ₹18,000–₹22,000/month (yield: 3.5–4.5% p.a.)
+- 2 BHK Standard: ₹28,000–₹35,000/month (yield: 3.5–4.5% p.a.)
+- 2 BHK Large: ₹35,000–₹42,000/month (yield: 3.5–4.5% p.a.)
+- 3 BHK Premium: ₹50,000–₹65,000/month (yield: 3.5–4.0% p.a.)
+
+Sunrise Heights is particularly attractive to IT professionals working in ITPL and surrounding tech parks, multinational expats, and young families. Average occupancy in similar Whitefield projects is 95%+. Rental management services can be arranged through our partner company, HomePlus Rentals (+91-80-9988-7766).
+
+CHUNK_ID: SRH-037
+TOPIC: Resale Policy
+TAGS: resale, transfer, NOC, resale charge, secondary market
+
+Buyers wishing to resell their unit (during the under-construction phase) must:
+- Obtain a No Objection Certificate (NOC) from Aurora Realty. NOC is issued within 7 working days of written request.
+- Pay a Transfer Fee of ₹1,00,000 to Aurora Realty (applicable only during the under-construction period).
+- Ensure all due payments are cleared before transfer.
+- Register a tripartite agreement (seller + buyer + developer) at the Sub-Registrar's Office.
+There is no restriction on resale after obtaining the OC and completing registration. Resale in the secondary market is the sole discretion of the registered owner post-possession.
+
+--------------------------------------------------------------------------------
+SECTION 13: CONTACT INFORMATION AND SALES
+--------------------------------------------------------------------------------
+
+CHUNK_ID: SRH-038
+TOPIC: Sales Office and Contact Details
+TAGS: contact, sales office, phone, email, address, visit, inquiry
+
+Aurora Realty Developers Pvt. Ltd. — Sales Office (Sunrise Heights Project)
+
+Site Sales Office Address:
+Plot No. 47, EPIP Zone, Whitefield Main Road, Whitefield, Bangalore – 560066
+(Adjacent to the project site; open 7 days a week, 10 AM to 7 PM)
+
+Corporate Office Address:
+Aurora Realty Developers Pvt. Ltd., 4th Floor, Prestige Meridian, MG Road, Bangalore – 560001
+
+Contact Numbers:
+- Sales Enquiry Hotline: 1800-XXX-XXXX (Toll-Free, 9 AM to 9 PM)
+- Direct Sales: +91-80-4567-8901 / +91-98451-00099
+- NRI Desk: +91-99001-23456
+- WhatsApp Enquiry: +91-98451-00099
+
+Email:
+- General Enquiry: sales@aurorarealty.in
+- NRI Enquiry: nri@aurorarealty.in
+- Customer Service: support@aurorarealty.in
+
+Website: www.aurorarealty.in/sunrise-heights
+
+Virtual Tour: Available on the website and via Matterport link (360° walkthrough of sample flat)
+
+CHUNK_ID: SRH-039
+TOPIC: Sample Flat / Site Visit
+TAGS: site visit, sample flat, show flat, visit, appointment
+
+A fully furnished and decorated sample flat (2 BHK Standard, Type A, Tower B, Ground Floor) is available for walk-in visits at the Sunrise Heights site office. The sample flat showcases all standard specifications and finishes. For a customized site visit with a dedicated sales consultant and architect walkthrough, please book in advance by calling +91-80-4567-8901 or booking via the website. Site visits are available Monday to Saturday: 10 AM to 6 PM, and Sunday: 11 AM to 5 PM. Outstation and NRI buyers can opt for a virtual live tour with a sales representative via video call (Zoom/Google Meet), available by appointment.
+
+CHUNK_ID: SRH-040
+TOPIC: Booking Process
+TAGS: booking, process, EOI, token amount, agreement, steps
+
+Steps to book an apartment at Sunrise Heights:
+
+Step 1 — Expression of Interest (EOI):
+Pay a token amount of ₹1,00,000 (refundable in case of non-allotment) to block your preferred unit. This can be done online via the website or at the site office.
+
+Step 2 — Allotment:
+Upon payment of 10% of the total cost (within 7 days of EOI), the unit is formally allotted and an Allotment Letter is issued.
+
+Step 3 — Agreement for Sale:
+The Agreement for Sale (as per RERA format) is executed within 30 days of allotment. Buyer pays the next 15% tranche at this stage. The agreement is stamped and notarized.
+
+Step 4 — Linked Payments:
+Subsequent payments are made as per the chosen payment plan (CLP, Down Payment, or Flexi).
+
+Step 5 — Possession:
+Upon project completion, OC, and clearance of all dues, possession is handed over and Sale Deed is registered.
+
+--------------------------------------------------------------------------------
+SECTION 14: FREQUENTLY ASKED QUESTIONS (FAQ)
+--------------------------------------------------------------------------------
+
+CHUNK_ID: SRH-041
+TOPIC: FAQ — General
+TAGS: FAQ, general questions, common queries, answers
+
+Q: Is Sunrise Heights a gated community?
+A: Yes. Sunrise Heights is a fully gated community with a single entry and exit point, 24x7 security, CCTV surveillance, and a visitor management system.
+
+Q: How many units are available in the project?
+A: There are a total of 336 units across three towers (Tower A, B, and C), each tower being G+18 floors.
+
+Q: Is Sunrise Heights RERA registered?
+A: Yes. RERA Registration Number: PRM/KA/RERA/1251/310/PR/180324/006542. Verifiable at rera.karnataka.gov.in.
+
+Q: What is the current status of construction?
+A: As of Q1 2024, foundation and piling work is complete for all three towers. Slab work is underway on Tower A.
+
+Q: Are there any ready-to-move-in units?
+A: No. Sunrise Heights is an under-construction project with possession scheduled for Q4 2026 (target) to Q1 2027 (RERA deadline).
+
+CHUNK_ID: SRH-042
+TOPIC: FAQ — Pricing and Payment
+TAGS: FAQ, payment, price, cancellation, refund
+
+Q: Can I negotiate the price?
+A: The prices listed are final. However, during pre-launch or special offer periods, discounts up to 5% may be available on select units. Contact the sales team for current offers.
+
+Q: What happens if I want to cancel my booking?
+A: Cancellation within 30 days of booking: Full refund of token amount minus ₹10,000 processing fee. Cancellation after 30 days but before Agreement for Sale: 2% of the total unit value is deducted. Cancellation after Agreement for Sale: As per RERA provisions, 10% of total value is forfeited as earnest money. The balance is refunded within 60 days.
+
+Q: Are there any offers for early birds or pre-launch buyers?
+A: During the pre-launch phase, units were available at ₹8,500/sq. ft. (vs. current ₹9,000–₹10,000). Pre-launch is now closed. Occasional limited-period offers are communicated via the website and registered buyer list.
+
+Q: Is there a GST on top of the price mentioned?
+A: Yes. For under-construction properties, 5% GST is applicable over and above the base price. Post-OC (ready-to-move units), no GST is applicable.
+
+CHUNK_ID: SRH-043
+TOPIC: FAQ — Amenities and Maintenance
+TAGS: FAQ, amenities, maintenance, pet, parking, clubhouse
+
+Q: Are pets allowed in Sunrise Heights?
+A: Yes. Pets are allowed subject to the community's pet policy (to be governed by the RWA). There is a dedicated Pet Park within the community. Pets must be vaccinated and on a leash in common areas.
+
+Q: Can I rent out my apartment?
+A: Yes. After possession and registration, you are free to rent out your apartment. There are no restrictions from the developer on renting.
+
+Q: Is the parking space covered?
+A: All mandatory parking allotted with the apartment is covered (stilt or basement). An additional open parking option is available at ₹2,00,000.
+
+Q: What is included in the maintenance charge?
+A: Maintenance covers security, housekeeping of common areas, lift AMC, STP operations, landscaping, DG operations, swimming pool upkeep, and basic building maintenance. It does not cover individual apartment repairs or utility bills.
+
+Q: Is there a generator backup for individual apartments?
+A: Yes. 1 kW of generator backup per unit is provided for essential circuits (lights, fans, and one plug point per room). Full AC and heavy appliance backup is not included and is the resident's responsibility via invertors or separate arrangements.
+
+CHUNK_ID: SRH-044
+TOPIC: FAQ — Legal and Documentation
+TAGS: FAQ, legal, title, resale, OC, will, inheritance, NRI
+
+Q: Will there be any legal issues with the land title?
+A: No. The land has clear and marketable title. It has been legally opined by M/s. Prakash & Nair Associates and is approved by five lending institutions.
+
+Q: Can I register the apartment in a joint name?
+A: Yes. Joint registration with up to two co-owners is permitted. All co-owners must provide KYC documents.
+
+Q: Can I include the apartment in my will or gift it?
+A: Yes. Post-registration, the apartment is your property and can be bequeathed via a will or gifted as per Indian succession and property laws.
+
+Q: What if the project is delayed beyond the RERA deadline?
+A: As per RERA, in case of delay, the buyer is entitled to either withdraw and get a full refund with interest (at SBI MCLR + 2%), or continue with the booking and receive interest compensation for the delay period from the developer.
+
+CHUNK_ID: SRH-045
+TOPIC: FAQ — Vastu and Orientation
+TAGS: FAQ, Vastu, direction, east facing, north facing, Vastu compliant
+
+Q: Is Sunrise Heights Vastu-compliant?
+A: The project has been planned with Vastu guidelines in mind. Tower A (north-south facing) and Tower B (east-west facing) have units with east or north-facing entrances, which are considered auspicious per Vastu Shastra. The clubhouse and common amenities are positioned in the north-east quadrant of the plot. Buyers with specific Vastu preferences may consult our Vastu advisor (complimentary one session with any booking). Note that individual Vastu requirements may vary and Aurora Realty does not guarantee full Vastu compliance for all units.
+
+Q: Which floor is best from an investment perspective?
+A: Upper floors (10th and above) typically command higher resale values and rental premiums due to views and better air circulation. However, lower floors are preferred by senior citizens and families with young children. All floors are structurally equivalent.
+
+--------------------------------------------------------------------------------
+END OF KNOWLEDGE BASE DOCUMENT
+PROPERTY: SUNRISE HEIGHTS | DEVELOPER: AURORA REALTY DEVELOPERS PVT. LTD.
+DOCUMENT VERSION: 1.0 | LAST UPDATED: Q1 2024
+TOTAL CHUNKS: 45 | SECTION COUNT: 14
+RAG PIPELINE NOTE: Each CHUNK_ID represents an independent, semantically complete retrieval unit. 
+TAGS are provided for keyword-based filtering alongside vector similarity search.
+================================================================================
