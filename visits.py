@@ -21,17 +21,11 @@ inside the 24h window) and failures are logged, not fatal.
 import sqlite3, threading, time
 from datetime import datetime, timedelta
 from tzutil import now_ist
-from config import (DB_FILE, AGENT_PHONE, SITE_NAME, SITE_ADDRESS,
-                    REMINDER_TEMPLATE_NAME, TEMPLATE_LANG)
+from config import DB_FILE, AGENT_PHONE, SITE_NAME, SITE_ADDRESS
 
-# sending functions are injected by whatsapp_backend to avoid circular import
+# Voice build: no WhatsApp senders. Agent notification happens via the call
+# transfer / Zoho push instead, so these stay None.
 _send_text = None
-_send_template = None
-_send_location = None
-
-def wire_senders(send_text, send_template, send_location):
-    global _send_text, _send_template, _send_location
-    _send_text, _send_template, _send_location = send_text, send_template, send_location
 
 def _ensure_columns():
     """Add reminders_sent column to older bookings tables if missing."""
@@ -132,9 +126,19 @@ def _parse_time(text, default_hour=11):
         h = int(m2.group(1))
         if m2.group(2) == "pm" and h != 12: h += 12
         return h
-    if "morning" in text: return 11
-    if "afternoon" in text: return 15
-    if "evening" in text: return 17
+    # Hindi: "4 baje", "11 baje subah", "5 baje shaam"
+    m3 = re.search(r"\b(\d{1,2})\s*baje\b", text)
+    if m3:
+        h = int(m3.group(1))
+        pm_hint = any(w in text for w in ("shaam", "sham", "raat", "dopahar", "evening", "pm"))
+        if pm_hint and h < 12:
+            h += 12
+        elif h <= 7:          # "4 baje" alone almost always means 4 PM for a site visit
+            h += 12
+        return h
+    if "morning" in text or "subah" in text: return 11
+    if "afternoon" in text or "dopahar" in text: return 15
+    if "evening" in text or "shaam" in text or "sham" in text: return 17
     return default_hour
 
 def parse_freeform_slot(text):
@@ -147,11 +151,11 @@ def parse_freeform_slot(text):
     now = now_ist()
     day = None
 
-    if "day after tomorrow" in t:
+    if "day after tomorrow" in t or "parso" in t or "parson" in t:
         day = now + timedelta(days=2)
-    elif "tomorrow" in t:
+    elif "tomorrow" in t or re.search(r"\bkal\b", t):
         day = now + timedelta(days=1)
-    elif "today" in t:
+    elif "today" in t or re.search(r"\baaj\b", t):
         day = now
     elif "weekend" in t:                       # this weekend -> Saturday
         day = _next_weekday(now, 5)
@@ -262,80 +266,3 @@ def get_active_booking(wa_number):
 # ─────────────────────────────────────────────
 # REMINDER SCHEDULER (background thread, checks every 10 min)
 # ─────────────────────────────────────────────
-
-def _send_reminder(wa_number, name, slot_label, offset_h):
-    if offset_h >= 24:
-        when = "tomorrow"
-    elif offset_h >= 12:
-        when = "later today"
-    else:
-        when = "in about 2 hours"
-    body = (f"Hi {name or 'there'}! Reminder: your site visit to {SITE_NAME} "
-            f"is {when} — {slot_label}. 📍 {SITE_ADDRESS}. "
-            f"Reply RESCHEDULE if you need a different time.")
-    sent_ok = False
-    if REMINDER_TEMPLATE_NAME and _send_template:
-        sent_ok = _send_template(wa_number, REMINDER_TEMPLATE_NAME, TEMPLATE_LANG,
-                                 [SITE_NAME, slot_label, SITE_ADDRESS])
-    if not sent_ok and _send_text:
-        # fallback: plain text (only delivers inside the 24h session window)
-        r = _send_text(wa_number, body)
-        sent_ok = r is not None and r.status_code == 200
-    return sent_ok
-
-def _reminder_offset_for(lead_time_h):
-    """Pick when to remind, based on how far ahead the booking was made:
-       booked <= 12h before visit  -> remind 2h before
-       booked <= 24h before visit  -> remind 12h before
-       booked  > 24h before visit  -> remind 24h before
-    """
-    if lead_time_h <= 12:
-        return 2
-    elif lead_time_h <= 24:
-        return 12
-    else:
-        return 24
-
-def reminder_loop():
-    _ensure_columns()
-    while True:
-        try:
-            now = now_ist()
-            con = sqlite3.connect(DB_FILE)
-            rows = con.execute(
-                "SELECT id, wa_number, name, slot_label, slot_dt, created_at, reminders_sent "
-                "FROM bookings WHERE status='confirmed'").fetchall()
-            for bid, wa, name, label, slot_dt, created_at, sent in rows:
-                dt = datetime.fromisoformat(slot_dt)
-                hours_left = (dt - now).total_seconds() / 3600
-                if hours_left <= 0:
-                    con.execute("UPDATE bookings SET status='done' WHERE id=?", (bid,))
-                    continue
-
-                # lead time = how far ahead the booking was made
-                try:
-                    created = datetime.fromisoformat(created_at)
-                    lead_time_h = (dt - created).total_seconds() / 3600
-                except Exception:
-                    lead_time_h = 999   # unknown -> treat as far-ahead (24h reminder)
-
-                offset = _reminder_offset_for(lead_time_h)
-                already = set(x for x in (sent or "").split(",") if x)
-
-                # fire the reminder once we're within the offset window and haven't sent it
-                if str(offset) not in already and hours_left <= offset:
-                    if _send_reminder(wa, name, label, offset):
-                        already.add(str(offset))
-                        con.execute("UPDATE bookings SET reminders_sent=? WHERE id=?",
-                                    (",".join(sorted(already)), bid))
-                        print(f"[REMINDER] {name or wa}: {offset}h reminder sent "
-                              f"(booked {lead_time_h:.0f}h ahead, {hours_left:.1f}h left)")
-            con.commit(); con.close()
-        except Exception as e:
-            print(f"[REMINDER ERROR] {e}")
-        time.sleep(600)  # 10 minutes
-
-def start_reminder_thread():
-    t = threading.Thread(target=reminder_loop, daemon=True)
-    t.start()
-    print("[REMINDERS] Scheduler running (10-min interval).")
