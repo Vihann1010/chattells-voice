@@ -43,6 +43,7 @@ call_state = {}
 # Vapi POSTs an OpenAI-style request; we stream back OpenAI-style chunks.
 # ─────────────────────────────────────────────
 
+@app.post("/chat/completions")
 @app.post("/vapi/chat")
 async def vapi_chat(request: Request):
     body = await request.json()
